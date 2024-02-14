@@ -1,0 +1,103 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App</title>
+
+  <link rel="stylesheet" href="../static/head.css">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+</head>
+
+<body>
+
+  
+  <div class="nav">
+    <div class="title">20Hour learning App </div>
+    <div class="add-task">Add New Skill</div>
+    <a class="logout" href="/logout">Logout</a>
+  </div>
+
+
+
+
+  <div id="task-insertion"class="container mt-5 disappear">
+    <h2 class="text-center">Add new task</h2>
+    <div class="row justify-content-center">
+      <div class="col-6 mx-auto">
+        <form action="/add-task" method="POST">
+          <div class="form-group">
+            <label for="task">Task:</label>
+            <input type="text" class="form-control" id="task" name="task">
+          </div>
+          <div class="form-group">
+            <label for="tag">Tag:</label>
+            <input type="text" class="form-control" id="tag" name="tag">
+          </div>
+          <div class="form-group">
+            <label for="priority">Priority:</label>
+            <select class="form-control" id="priority" name="priority">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="task-side border">
+      <div id="task-title">Tasks</div>
+      <div class="tasks">
+      </div>
+    </div>
+    <div class="timer border">
+      <div class="above-timer">
+        <div class="current-task"></div>
+        <input class="duration-input" type="text">
+      </div>
+
+      <div class="timerContainer">
+        <div class="Counter"><div class="miutes">00</div> : <div class="seconds">00</div></div>
+        <div class="timercontrol"><div class="start">Start</div><div id="pause">Pause</div><div class="end">End</div></div>
+      </div>
+
+      <div class="current-task"></div>
+
+      <div class="duration"></div>
+
+    </div>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Scripts placed just before the closing </body> tag -->
+
+  <script src="../static/timer.js"></script>
+  <script src="../static/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

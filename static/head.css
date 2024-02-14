@@ -1,0 +1,328 @@
+.title {
+
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-weight: bolder;
+    font-size: 40px;
+    margin-left: 5%;
+    color: #13C4A3;
+
+}
+
+.nav{
+   
+    background-color: #4C6085;
+    height:80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px;
+    
+    padding-right: 5%;
+}
+.logout{
+    color:#36F1CD;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight:bold;
+    
+
+}
+.logout:hover{
+    color:wheat;
+    font-size: 30px;
+    text-decoration: none;
+    
+    
+}
+.add-task{
+    font-weight: bold;
+    font-size: 30px;
+    color: #39A0ED;
+    cursor: pointer;
+}
+.content {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Three equal columns */
+    /* Optional gap between grid items */
+    height: 100%;
+    gap: 20px;
+}
+.disappear{
+    display: none;
+}
+
+
+
+.timer {
+    grid-column: 2/4;
+    background-color: #7dbafc;
+    font-size: 60px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:1fr 237px 1fr ;
+    
+}
+
+.timerContainer{
+    width: fit-content;
+    padding: 20px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
+    display: block; 
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+.timerControl{
+    display: flex;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+}
+.counter{
+    display: flex;
+    gap:50px;
+    display:flex;
+    justify-content: center;
+}
+
+
+
+.border {
+    border-radius: 25px;
+}
+
+.above-timer{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-size: 50px;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-rows:repeat(4,1fr) ;
+    justify-content: center;
+}
+.duration-input{
+    grid-row: 2/3;
+    grid-row: 2/3;
+    border: transparent;
+    width: 500px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.current-task{
+    grid-row: 3/4;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.duration{
+    grid-row:3/4;
+    grid-column: 2/3;
+    font-size: 40px;
+    margin-top: -20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #696767;
+}
+
+
+
+
+
+
+.task-side {
+    grid-column: 1/2;
+    background-color: #e1e1e1;
+    padding-left: 3%;
+    padding-top: 3%;
+}
+
+
+
+
+
+
+
+#task-title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 3%;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.task{
+    margin: 10px auto;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 27px;
+    background-color:white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    width: 95%;
+    height: fit-content;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.task-tag{
+    border-radius: 13px;
+    padding: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.task-status{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 25%;
+    color: #ff6a6a;
+}
+
+/* title in task div */
+.task-title{
+    font-size: 30px;
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+
+
+
+.task-control{
+    grid-column: 2/3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.delete{
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+
+
+
+.start,#pause,.end{
+    cursor: pointer;
+}
+.start:hover,#pause:hover,.end:hover{
+    cursor: pointer;
+    color: rgb(88, 88, 88);
+}
+
+
+
+@media (max-width: 1150px) {
+    .task-tag {
+      display: none;
+    }
+    .task-control{
+        justify-content: right;
+    }
+  }
+  
+@media (max-width: 860px) {
+    .duration-input{
+        width: 250px;
+        grid-column: 2/3;
+        
+    }
+    .timercontrol {
+        display: flex; /* Makes the container a flexbox for row layout */
+        flex-direction: column; /* Sets the flexbox direction to column for vertical order */
+        align-items: center; /* Aligns child elements horizontally in the center */
+        justify-content: center; /* Aligns child elements vertically in the center (optional) */
+        gap:0px;
+      }
+      
+      .timercontrol div { /* Styles each child element */
+        margin: 5px; /* Adds some spacing between elements */
+        padding: 10px; /* Adds padding to each element */
+        text-align: center; /* Aligns text in the center of each element */
+        cursor: pointer; /* Makes the elements look clickable (optional) */
+      }
+      .timerContainer{
+        height: fit-content;
+      }
+      .nav {
+        /* Center horizontally and vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       height: 100px;/* Ensure full viewport height */
+      
+        /* Create grid with 3 rows and equal spacing */
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 0px; /* Adjust spacing as needed */
+      
+        /* Position content in middle column */
+        justify-items: center; /* Horizontal alignment */
+      }
+      
+      .title,
+      .add-task,
+      .logout {
+        /* Align text to center */
+        text-align: center;
+      
+        /* Adjust font size and style as desired */
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem; /* Vertical spacing */
+      }
+      
+      .add-task {
+        /* Optional styling for "Add New Skill" button */
+        background-color: #2196F3; /* Adjust color */
+        color: #fff; /* Adjust text color */
+        padding: 0.5rem 1rem; /* Adjust padding */
+        border-radius: 5px; /* Adjust border radius */
+        cursor: pointer; /* Indicate interaction */
+      }
+      
+      .logout {
+        /* Optional styling for "Logout" link */
+        text-decoration: none; /* Remove underline */
+        color: #999; /* Adjust color */
+        font-style: italic; /* Optional stylistic variation */
+      
+        &:hover {
+          color: #333; /* Change color on hover */
+        }
+      }
+      
+  }
+  
